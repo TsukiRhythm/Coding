@@ -86,7 +86,7 @@
 
       snake.unshift(head);
 
-      // cek makan
+      
       if (head.x === food.x && head.y === food.y) {
         score++;
         if (score > highScore) highScore = score;
@@ -97,7 +97,7 @@
         snake.pop();
       }
 
-      // cek tabrak
+    
       if (
         head.x < 0 ||
         head.y < 0 ||
@@ -126,7 +126,6 @@
 
     setInterval(gameLoop, speed);
 
-    // ✅ Panah + WASD
     document.addEventListener("keydown", (e) => {
       if ((e.code === "ArrowUp" || e.key === "w" || e.key === "W") && direction !== "down") {
         direction = "up";
@@ -143,4 +142,5 @@
     });
   </script>
 </body>
+
 </html>
